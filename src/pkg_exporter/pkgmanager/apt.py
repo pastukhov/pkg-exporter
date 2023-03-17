@@ -1,6 +1,6 @@
 import os
 import apt
-import apt.progress
+# import apt.progress
 from pathlib import Path
 
 
