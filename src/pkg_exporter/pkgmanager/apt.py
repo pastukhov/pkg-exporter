@@ -1,6 +1,10 @@
+
+import sys
+sys.path.append('/usr/lib/python3/dist-packages')
+
 import os
 import apt
-# import apt.progress
+import apt.progress
 from pathlib import Path
 
 
