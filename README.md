@@ -6,6 +6,14 @@ This project provides an textfile-based exporter for apt-repositories.
 
 For the changelog, use the [Releases-Section on GitHub](https://github.com/margau/pkg-exporter/releases/)
 
+## Running inside docker
+
+To run as docker container host mounts are required as follow:
+```
+docker build .-t pkg-exporter
+docker run -it -v /etc:/etc:ro -v /var/lib:/var/lib:ro -v /var/cache:/var/cache:ro  pkg-exporter pkg-exporter
+```
+
 ## Exported Metrics
 
 At the moment, the packages installed, upgradable, broken and autoremovable are exported per repository as gauge. The label set depends on the packet manager type.
